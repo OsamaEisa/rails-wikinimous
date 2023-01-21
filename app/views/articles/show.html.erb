@@ -1,0 +1,9 @@
+<h2><%= @article.title %></h2>
+<p><%= @article.content %></p>
+
+
+<%= link_to "Edit article", edit_article_path(@article), class: "btn btn-warning" %>
+<%= link_to "Delete article", article_path(@article),
+data: {turbo_method: :delete, turbo_confirm: "Are you sure?"},
+class: "btn btn-danger" %>
+<h4><%= link_to "All articles", articles_path, class: "btn btn-primary m-4" %></h4>
